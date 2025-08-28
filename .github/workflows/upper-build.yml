@@ -11,6 +11,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - run: go version
       - run: pwd && ls -al
       - uses: actions/checkout@v4
       - run: pwd && ls -al
@@ -29,4 +30,3 @@ jobs:
           go test
         working-directory: upper
         name: build and test
-# add comment to trigger a build
